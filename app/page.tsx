@@ -1,6 +1,6 @@
 import { PageLayout } from "@/components/page-layout";
 import { Container } from "@/components/container";
-import { MemorialHeader } from "@/components/memorial-header";
+import { HeroMemorial } from "@/components/hero-memorial";
 import { MemorialInfo } from "@/components/memorial-info";
 import { MemorialBio } from "@/components/memorial-bio";
 import { MemorialQuotes } from "@/components/memorial-quotes";
@@ -12,16 +12,16 @@ import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
-    <PageLayout backgroundImage="/images/background.png">
+    <PageLayout>
+      <HeroMemorial
+        fullName="Александр Викторович Карпук"
+        birthDate="1973-02-13"
+        deathDate="2025-08-13"
+        photoUrl="http://127.0.0.1:54331/storage/v1/object/public/memorial-media/memorials/9d1ef1c4-0116-4d12-84b4-c46a5816061f/photo/1755110375236_main_image_3.png"
+        birthPlace="Солигорск, Беларусь"
+        deathPlace="Брест, Беларусь"
+      />
       <Container>
-        <MemorialHeader
-          fullName="FIRST_NAME MIDDLE_NAME LAST_NAME"
-          birthDate="1964-06-15"
-          deathDate="2024-10-09"
-          photoUrl="https://zqqyhudmcjwubslcaznh.supabase.co/storage/v1/object/public/memorial_photos/memorial/l_i25vXr5z2_g-o9AtgBp.png"
-          birthPlace="Телеханы, Беларусь"
-          deathPlace="Брест, Беларусь"
-        />
         <MemorialInfo />
         <MemorialBio />
       </Container>
